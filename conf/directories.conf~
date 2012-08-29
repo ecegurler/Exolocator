@@ -1,0 +1,8 @@
+(Input File Directory)
+/var/www/dept/bmad/htdocs/projects/exolocator/Exolocator/app/controllers/input.fa
+(Database)
+/var/www/dept/bmad/htdocs/projects/exolocator/Exolocator/Resource/longest_human/longest_transcripts.human.fa
+(Blastall Results Output)
+/var/www/dept/bmad/htdocs/projects/exolocator/Exolocator/app/controllers/test.out
+(Directory Of Blastall)
+/cluster/apps/x86_64/bin/blastall

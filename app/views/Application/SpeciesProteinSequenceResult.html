@@ -1,0 +1,178 @@
+#{extends 'main.html' /}
+#{set title: 'Home' /}
+#{extends 'main_layout.html' /}
+
+#{set 'description'}
+         <br> 
+	<h3>What is Exolocator?</h3>
+ <br><br>	
+	<p>
+<b>ExoLocator</b> is a database  of <a href="http://en.wikipedia.org/wiki/Exon">exons</a> from vertebrate genomes deposited in
+<a href="http://www.ensembl.org">ENSEMBL</a>. 
+It collects exons annotated by the ENSMBL pipeline, as well as by our own extended search by similarity to known human exon sequences.  
+	</p>
+<br>
+ <p>
+In our approach  we  use <a href="https://github.com/mkorpar/swSharp"><b>SW#</b></a> (pronounced "SW sharp" 
+and <a href="https://github.com/mkorpar/swSharp">  available on github </a>)
+ hardware accelerated Smith-Waterman algorithm  to look for exons that are similar to those found in human proteins. It enables us to do dynamic programming  searching on the stretcehs of genomic seqeunces typically available only to heuristic methods.
+	</p>
+
+<br>
+ <p> <a href="https://github.com/abulovic/SuperExonRetriver2000"><b>SuperExonRetriver2000</b></a>,  
+
+the Python pipeline used to fill our database, is 
+ <a href="https://github.com/abulovic/SuperExonRetriver2000"> also available for inspection and download on github</a>.
+	</p>
+
+
+#{/set}
+
+#{set 'species_search'}
+	</br>
+	<h2>Search for exons from a particular species</h2>
+	</br>
+	#{form @Application.singleSpeciesSearchForm()}
+
+    	<table>
+
+	<tr> <br> </tr>
+	<tr>
+        	<td rowspan = "3"  width="60%"> 
+			<p>  ${Final}<br>For further enqueries please check <a href="http://www.ensembl.org">ENSEMBL</a>.
+</p>
+	</td>
+		<td><label for="protein_id">Species specific ensembl id: </label></td>
+	</tr>
+
+	<tr>			
+	<td><input type="text" name="protein_id" id="protein_id" value=${pro_id}></td>
+	</tr>
+
+	<tr>
+	<td><input type="submit" id="search" value="Search" /></td>
+	</tr>
+	
+    </table>
+
+	#{/form}	
+#{/set}
+
+
+#{set 'human_homolog_search'}
+	</br>
+
+
+
+
+
+	<h2>Search for reconstructed protein sequences</h2>
+	</br>
+	#{form @Application.humanHomologSearchForm()}
+        <table>
+		 <tr> <br> </tr>
+		 <tr>
+                 <td rowspan = "4"  width="65%"> <p> Enter ENSEMBL identifier of a human  protein  to obtain the most complete
+                           protein sequences (we could assemble) 
+                           of its tentative orthologues from other species. (<a href="http://www.uniprot.org/">UNIPROT</a> and  
+		 <a href="http://www.ensembl.org">ENSEMBL</a> databases allow retrieval 
+                  of the identifier by common name of the protein.) </p> </td>
+			<td><label for="ref_protein_id">Ensembl id for human reference protein: </label></td>
+	 	 </tr>
+
+
+		 <tr>
+			<td><input type="text" name="ref_protein_id" id="ref_protein_id" 
+                                   value="${params.ref_protein_id}ENSP00000298743"/></td>
+	 	 </tr>
+
+		<tr>
+						<td><label for="species">Species: </label>
+			    <select name="species" id="species" value="${params.species}"/>
+  <option>all</option>
+
+</select></td>
+		</tr>
+
+		 <tr>
+			<td><input type="submit" id="search" value="Search" /></td>
+		 </tr>
+
+		 <tr> <td><br> </td></tr>
+
+	 	 <tr> 
+                    <td>  <p> The result - the alignment of full protein sequences - 
+                       can be downloaded in aligned FASTA format, or viewed in the browser. </p>
+		 </td>
+
+		</tr>
+	#{/form}	
+#{/set}
+
+#{set 'specific_human_textarea'}
+	#{form @Application.HumanProteinSequenceResult()}
+
+	</table>
+
+       <table align="center" width="70%">	
+            <tr align="center"  >
+	      <td>
+	            <label for="protein_seq">Species specific protein sequence: </label>
+	      </td>
+	    </tr></br>
+	  
+	    <tr align="center" width="50%">
+              <td>
+                    <textarea cols="60" rows="5" name="human_pro_id" id="human_pro_id" >MASGVAVSDGVIKVFNDMKVRKSSTPEEVKKRKKAVLFCLSEDKKNIILEEGKEILVGDV
+GQTVDDPYATFVKMLPDKDCRYALYDATYETKESKKEDLVFIFWAPESAPLKSKMIYASS
+KDAIKKKLTGIKHELQANCYEEVKDRCTLAEKLGGSAVISLEGKPL</textarea>
+		   
+              </td>
+            </tr></br>
+	
+	    <tr align="center">
+              <td>
+                    <input type="submit" id="searchByProSeq" value="Submit" />
+              </td>      
+            </tr>
+
+	</table>
+
+
+	#{/form}
+	
+
+
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			change_species_select();
+			
+			$("input[id='ref_protein_id']").change(function(){
+				change_species_select()
+			});
+		});
+		myTextarea
+		var change_species_select = function() {
+				$("select[id='species']: option").remove();
+				var ref_protein_id = $("input[id='ref_protein_id']").val();
+		
+				var speciesList = #{jsAction @Application.getSpeciesForProtein(':ensemblID') /}
+		
+		        $.getJSON(speciesList({ensemblID: ref_protein_id}), function(species) {
+		        	if (species.length > 1){
+		        		$("select[id='species']").append(new Option("all", "all"));
+		        	}
+		        	$.each(species, function(i){
+		        		$("select[id='species']").append(new Option(species[i], species[i]));
+		        	})
+		        	if (species.length === 0 && ref_protein_id != "") {
+	        		alert("No available species!");
+	        	}
+	        });
+		}
+
+	</script>
+#{/set}

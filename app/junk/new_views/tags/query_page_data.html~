@@ -1,0 +1,93 @@
+#{extends 'query_page_layout.html' /}
+#{set title:'Home' /}
+
+#{set 'description'}
+	<h3>What is this?</h3>	
+	<p>
+
+ExoLocator is a database  of exons from vertebrate genomes deposited in ENSEMBL. It collects exons annotated by the ENSMBL pipeline, as well as by our own extended homology based search.  In our approach  we  use hardware accelerated Smith-Waterman algorithm to look for exons that are similar to those found in human proteins. 
+	</p>
+#{/set}
+
+#{set 'species_search'}
+	</br>
+	<h2>Species Specific Search</h2>
+	</br>
+	#{form @Application.singleSpeciesSearchForm()}
+    <table>
+		<tr>
+			<td><label for="protein_id">Ensembl id: </label></td>
+			<td><input type="text" name="protein_id" id="protein_id" value="${params.protein_id}"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="submit" id="search" value="Search for exons" /></td>
+		</tr>
+
+		<tr> <td>Enter ENSEMBL identifier of a protein from any vertebrate species to
+		 obtain all exons compiled in the database. 
+		 (UNIPROT and  ENSEMBL databases allow retrieval of the identifier by protein name search.) <br>
+
+		 The results can be downloaded as individual fasta files, or be viewed in the browser.
+		 </td>
+		</tr>
+
+	</table>
+	#{/form}	
+#{/set}
+
+#{set 'human_homolog_search'}
+	</br>
+	<h2>All-species Search</h2>
+	</br>
+	#{form @Application.humanHomologSearchForm()}
+    <table>
+		<tr>
+			<td><label for="ref_protein_id">Ensembl id: </label></td>
+			<td><input type="text" name="ref_protein_id" id="ref_protein_id" value="${params.ref_protein_id}"/></td>
+		</tr>
+		<tr>
+			<td><label for="species">Species: </label></td>
+			<td><select name="species" id="species" value="${params.species}"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="submit" id="search" value="Search for exons" /></td>
+		</tr>
+
+	 	<tr> <td>Enter ENSEMBL identifier of a human  protein  to obtain the most complete protein sequences (we could assemble)  of its tentative orthologues from other species. (UNIPROT and  ENSEMBL databases allow retrieval of the identifier by protein name search.)  The result - the alignment of full protein sequences - can be downloaded in aligned FASTA format, or viewed in the browser.
+		 </td>
+		 </tr>
+
+	</table>
+	#{/form}	
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			change_species_select();
+			
+			$("input[id='ref_protein_id']").change(function(){
+				change_species_select()
+			});
+		});
+		
+		var change_species_select = function() {
+				$("select[id='species']: option").remove();
+				var ref_protein_id = $("input[id='ref_protein_id']").val();
+		
+				var speciesList = #{jsAction @Application.getSpeciesForProtein(':ensemblID') /}
+		
+		        $.getJSON(speciesList({ensemblID: ref_protein_id}), function(species) {
+		        	if (species.length > 1){
+		        		$("select[id='species']").append(new Option("all", "all"));
+		        	}
+		        	$.each(species, function(i){
+		        		$("select[id='species']").append(new Option(species[i], species[i]));
+		        	})
+		        	if (species.length === 0 && ref_protein_id != "") {
+	        		alert("No available species!");
+	        	}
+	        });
+		}
+	</script>
+#{/set}

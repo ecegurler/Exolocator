@@ -1,0 +1,129 @@
+#{extends 'query_page_layout.html' /}
+#{set title:'Home' /}
+
+#{set 'description'}
+	<h3>What is ExoLocator?</h3>
+	<br>	
+         <table>
+<tr> <td> <p>
+ExoLocator is a database 9187608976 of exons from vertebrate genomes deposited in ENSEMBL. It collects exons annotated by the ENSMBL pipeline, as well as by our own extended homology based search.  
+	</p></td> </tr>
+
+<tr> <td> <br> </td> </tr>
+
+<tr> <td> <p>
+In our approach  we  use hardware accelerated Smith-Waterman algorithm to look for exons that are similar to those found in human proteins. 
+	</p></td> </tr>
+   
+</table>
+
+#{/set}
+
+#{set 'species_search'}
+	</br>
+	<h2>Species Specific Search</h2>
+	</br>
+	#{form @Application.humanHomologSearchForm()}
+         <table>
+		 <tr> <br> </tr>
+		 <tr>
+                 <td>  <p> Enter ENSEMBL identifier of a protein from any vertebrate species to
+		 obtain all exons compiled in the database. 
+		 (UNIPROT and  ENSEMBL databases allow retrieval of the identifier by protein name search.) </p>
+                 </td>               
+
+	         <td><input type="text" name="ref_protein_id" id="ref_protein_id" value="${params.ref_protein_id}"/></td>
+
+	 	</tr>
+
+		<tr>
+			<td></td>
+			<td><label for="species"> Species: </label>
+			<select name="species" id="species" value="${params.species}"/></td>
+	 	</tr>
+          	<tr>  <td> <br> </td></tr>
+		<tr>
+			<td></td>
+			<td><input type="submit" id="search" value="Search for exons" /></td>
+		</tr>
+
+                 <tr> 
+                    <td> <p>  The exons that ExoLocator is aware of  can be downloaded as individual fasta files, 
+either on nucleotide or on amino acid level, or be viewed in the browser. </p>
+
+		 </td>
+		</tr>
+
+
+	</table>
+
+
+
+
+	#{/form}	
+#{/set}
+
+
+#{set 'human_homolog_search'}
+
+	</br>
+	<h2>All-species Search</h2>
+	</br>
+	#{form @Application.singleSpeciesSearchForm()}
+        <table>
+		 <tr> <br> </tr>
+		 <tr>
+                 <td> <p> Enter ENSEMBL identifier of a human  protein  to obtain the most complete protein sequences (we could assemble) 
+        of its tentative orthologues from other species. (UNIPROT and  ENSEMBL databases allow retrieval of the identifier by protein name search.) </p>
+
+
+ 
+		 </td>
+
+			<td><input type="text" name="protein_id" id="protein_id" value=""/></td>
+		 </tr>
+		 <tr>
+			<td></td>
+			<td><input type="submit" id="search" value="Search for exons" /></td>
+		 </tr>
+
+	 	 <tr> 
+                    <td>  <p> The result - the alignment of full protein sequences - 
+                       can be downloaded in aligned FASTA format, or viewed in the browser. </p>
+		 </td>
+		</tr>
+
+	</table>
+
+
+	#{/form}	
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			change_species_select();
+			
+			$("input[id='ref_protein_id']").change(function(){
+				change_species_select()
+			});
+		});
+		
+		var change_species_select = function() {
+				$("select[id='species']: option").remove();
+				var ref_protein_id = $("input[id='ref_protein_id']").val();
+		
+				var speciesList = #{jsAction @Application.getSpeciesForProtein(':ensemblID') /}
+		
+		        $.getJSON(speciesList({ensemblID: ref_protein_id}), function(species) {
+		        	if (species.length > 1){
+		        		$("select[id='species']").append(new Option("all", "all"));
+		        	}
+		        	$.each(species, function(i){
+		        		$("select[id='species']").append(new Option(species[i], species[i]));
+		        	})
+		        	if (species.length === 0 && ref_protein_id != "") {
+	        		alert("No available species!");
+	        	}
+	        });
+		}
+	</script>
+#{/set}

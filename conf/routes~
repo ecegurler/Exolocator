@@ -1,0 +1,23 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                       Application.index
+GET		/application/getspeciesforprotein				Application.getSpeciesForProtein
+GET		/application/jalviewInputFileCleanup				Application.jalviewInputFileCleanup
+GET		/application/jalviewInputFileGenerator				Application.jalviewInputFileGenerator
+GET		/help								Application.help
+GET		/home/eceg/exolocator/Exolocator/app/controllers/input.fa	Application.InputFileForProteinSeq
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+GET     /lib/                                   staticDir:lib
+GET     /Resource/                              staticDir:Resource
+GET     /Best_MSA/                              staticDir:Best_MSA
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

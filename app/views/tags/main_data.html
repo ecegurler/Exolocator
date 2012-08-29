@@ -28,33 +28,62 @@ the Python pipeline used to fill our database, is
 #{/set}
 
 #{set 'species_search'}
-	</br>
+	<h1 style="color:#F1F1F1;">-</h1>
 	<h2>Search for exons from a particular species</h2>
 	</br>
 	#{form @Application.singleSpeciesSearchForm()}
-    <table>
 
-		 <tr> <br> </tr>
-		 <tr>
-                 <td rowspan = "3"  width="60%"> <p> Enter ENSEMBL identifier of a protein from any vertebrate species to
-		 obtain all exons compiled in the database. 
-		 (<a href="http://www.uniprot.org/">UNIPROT</a> and  
-		 <a href="http://www.ensembl.org">ENSEMBL</a> databases allow retrieval 
-                  of the identifier by common name of the protein.) </p>
+    	<table>
 
-</td>
-		           <td><label for="protein_id">Species specific ensembl id: </label></td>
-	 	 </tr>
+	<tr> <br> </tr>
+	<tr>
+        	<td rowspan = "3"  width="60%"> 
+			<p> Enter ENSEMBL identifier of a protein from any vertebrate species to obtain all exons compiled in the database.(
+			<a href="http://www.uniprot.org/">UNIPROT</a> and  
+			<a href="http://www.ensembl.org">ENSEMBL</a> databases allow retrieval of the identifier by common name of the protein.) <br /><br />
+			</p>
 
+		</td>
+		<td><label for="protein_id">Species specific ensembl id: </label></td>
+	</tr>
 
+	<tr>			
+	<td><input type="text" name="protein_id" id="protein_id" value="${params.protein_id}ENSAMEP00000020478"/></td>
+	</tr>
 
-		<tr>			
-			<td><input type="text" name="protein_id" id="protein_id" value="${params.protein_id}ENSAMEP00000020478"/></td>
-		</tr>
-		<tr>
-			<td><input type="submit" id="search" value="Search" /></td>
-		</tr>
+	<tr>
+	<td><input type="submit" id="search" value="Search" /></td>
+	</tr>
+    
+
+	#{/form}	
+#{/set}
+
+#{set 'specific_species_textarea'}
+	#{form @Application.SpeciesProteinSequenceResult()}
+
+       <table align="center" width="70%">	
+            <tr align="center"  >
+	      <td>
+	            <label for="protein_seq">Species specific protein sequence: </label>
+	      </td>
+	    </tr></br>
+
+	    <tr align="center" width="50%">
+              <td>
+                    <textarea cols="60" rows="5" name="pro_id" id="pro_id"  >MASGVAVSDGVIKVFNDMKVRKSSTPEEVKKRKKAVLFCLSEDKKNIILEEGKEILVGDV
+GQTVDDPYATFVKMLPDKDCRYALYDATYETKESKKEDLVFIFWAPESAPLKSKMIYASS
+KDAIKKKLTGIKHELQANCYEEVKDRCTLAEKLGGSAVISLEGKPL</textarea>
+              </td>
+            </tr></br>
+	
+	    <tr align="center">
+              <td>
+                    <input type="submit" id="searchByProSequence" value="Submit" />
+              </td>      
+            </tr>
 	</table>
+
 	#{/form}	
 #{/set}
 
@@ -87,7 +116,10 @@ the Python pipeline used to fill our database, is
 
 		<tr>
 			<td><label for="species">Species: </label>
-			    <select name="species" id="species" value="${params.species}"/></td>
+			    <select name="species" id="species" value="${params.species}"/>
+  <option>all</option>
+
+</select></td>
 		</tr>
 
 		 <tr>
@@ -100,7 +132,37 @@ the Python pipeline used to fill our database, is
                     <td>  <p> The result - the alignment of full protein sequences - 
                        can be downloaded in aligned FASTA format, or viewed in the browser. </p>
 		 </td>
+
 		</tr>
+	#{/form}	
+#{/set}
+
+#{set 'specific_human_textarea'}
+	#{form @Application.HumanProteinSequenceResult()}
+
+	</table>
+
+       <table align="center" width="70%">	
+            <tr align="center"  >
+	      <td>
+	            <label for="protein_seq">Species specific protein sequence: </label>
+	      </td>
+	    </tr></br>
+	  
+	    <tr align="center" width="50%">
+              <td>
+                    <textarea cols="60" rows="5" name="human_pro_id" id="human_pro_id" >MASGVAVSDGVIKVFNDMKVRKSSTPEEVKKRKKAVLFCLSEDKKNIILEEGKEILVGDV
+GQTVDDPYATFVKMLPDKDCRYALYDATYETKESKKEDLVFIFWAPESAPLKSKMIYASS
+KDAIKKKLTGIKHELQANCYEEVKDRCTLAEKLGGSAVISLEGKPL</textarea>
+		   
+              </td>
+            </tr></br>
+	
+	    <tr align="center">
+              <td>
+                    <input type="submit" id="searchByProSeq" value="Submit" />
+              </td>      
+            </tr>
 
 	</table>
 
@@ -119,7 +181,7 @@ the Python pipeline used to fill our database, is
 				change_species_select()
 			});
 		});
-		
+		myTextarea
 		var change_species_select = function() {
 				$("select[id='species']: option").remove();
 				var ref_protein_id = $("input[id='ref_protein_id']").val();
@@ -138,5 +200,6 @@ the Python pipeline used to fill our database, is
 	        	}
 	        });
 		}
+
 	</script>
 #{/set}

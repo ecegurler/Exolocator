@@ -1,0 +1,12 @@
+
+========================[ Aug 6, 2012  5:24 PM ]========================
+Version 2.2.22 [Sep-27-2009]
+Started database file "longest_transcripts.human.fa.db"
+ERROR: [000.000] Could not open longest_transcripts.human.fa.db
+
+
+========================[ Aug 6, 2012  5:25 PM ]========================
+Version 2.2.22 [Sep-27-2009]
+Started database file "longest_transcripts.human.fa"
+Formatted 21946 sequences in volume 0
+SUCCESS: formatted database longest_transcripts.human.fa

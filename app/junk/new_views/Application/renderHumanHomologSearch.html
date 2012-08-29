@@ -1,0 +1,41 @@
+#{extends 'human_homolog_results_layout.html' /}
+#{set title:'Home' /}
+
+#{set 'ortholog_list_content'}
+<h2>Orthologs</h2>
+<div class="ortholog_list">
+  #{list items:orthologs, as:'ortholog_item'}
+  		<h4><a href="@{Application.singleSpeciesSearchForm(ortholog_item.protein_id)}">${ortholog_item.species}</a></h4>
+  #{/list} 
+</div>  
+
+   <script type="text/javascript">
+   	var showUserAction = #{jsAction @Application.jalviewInputFileCleanup() /};
+     $(document).ready(function(){
+     	setTimeout(function() {$.getJSON(showUserAction());},5000);
+     });
+   </script>
+#{/set}
+
+#{set 'jalview'}
+TODO: AUTOMATIC RESIZING!!!
+	</br>
+	<h2>JalView</h2>
+	<div class="jalview">
+		<p>
+			<applet code="jalview.bin.JalviewLite"
+				width="1220" height="300" archive="@{'/lib/jalviewApplet.jar'}">
+				<param name="file" value="${jalview_input_f}">
+				<param name="defaultColour" value="Zappo">
+				<param name="embedded" value="true">
+				<param name="showFullId" value="true">
+				<param name="showConservation" value="false">
+				<param name="showQuality" value="false">
+				<param name="showConsensus" value="false">
+				<param name="showFeatureSettings" value="false">
+				<param name="heightScale" value="2.0">
+				<param name="RGB" value="EAEAEA">
+			</applet>
+		</p>
+	</div>
+#{/set}

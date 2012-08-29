@@ -1,8 +1,741 @@
-Listening for transport dt_socket at address: 8000
-12:50:27,840 INFO  ~ Starting /home/marioot/Eclipse/WebDev/Exolocator
-12:50:28,464 WARN  ~ You're running Play! in DEV mode
-12:50:28,569 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-12:50:36,871 INFO  ~ Connected to jdbc:mysql://localhost/exolocator_db
-12:50:37,698 INFO  ~ Application 'exolocator' is now started !
-USAO!
-USAO!
+Listening for transport dt_socket at address: 34523
+16:20:37,651 INFO  ~ Starting /var/www/dept/bmad/htdocs/projects/exolocator/Exolocator
+16:20:37,655 ERROR ~ Module table will not be loaded because /opt/play-1.2/play-1.2.4/modules/table-1.2.2 does not exist
+16:20:38,116 WARN  ~ You're running Play! in DEV mode
+16:20:38,173 INFO  ~ Listening for HTTP at reindeer02exolocator.private.bii/172.20.194.112:8001 (Waiting a first request to start) ...
+16:30:58,915 INFO  ~ Connected to jdbc:mysql://localhost/exolocator_db
+16:31:00,466 INFO  ~ Application 'exolocator' is now started !
+08:46:14,191 ERROR ~ 
+
+@6b1efkk30
+application.jalview.bin.JalviewLite action not found
+
+Action not found
+Action application.jalview.bin.JalviewLite could not be found. Error raised is Controller controllers.application.jalview.bin not found
+
+play.exceptions.ActionNotFoundException: Action application.jalview.bin.JalviewLite not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:590)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:85)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.jalview.bin not found
+	... 3 more
+08:46:17,276 ERROR ~ 
+
+@6b1efkk31
+application.jalview.bin.JalviewLite action not found
+
+Action not found
+Action application.jalview.bin.JalviewLite could not be found. Error raised is Controller controllers.application.jalview.bin not found
+
+play.exceptions.ActionNotFoundException: Action application.jalview.bin.JalviewLite not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:590)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:85)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.jalview.bin not found
+	... 3 more
+16:26:18,112 ERROR ~ 
+
+@6b1efkk34
+Internal Server Error (500) for request GET /help
+
+No route found (In /app/views/main.html around line 30)
+No route able to invoke action Application.contact was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:242)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:267)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Application.help(Application.java:25)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+16:58:05,027 ERROR ~ 
+
+@6b1efkk37
+Internal Server Error (500) for request GET /
+
+No route found (In /app/views/main.html around line 30)
+No route able to invoke action Application.contact was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:242)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:267)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:267)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Application.index(Application.java:21)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+16:58:19,648 ERROR ~ 
+
+@6b1efkk3a
+Internal Server Error (500) for request GET /
+
+No route found (In /app/views/main.html around line 30)
+No route able to invoke action Application.contact was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:242)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:267)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:267)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Application.index(Application.java:21)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+16:58:59,548 ERROR ~ 
+
+@6b1efkk3d
+Internal Server Error (500) for request GET /
+
+No route found (In /app/views/main.html around line 30)
+No route able to invoke action Application.contact was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:242)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:267)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:267)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Application.index(Application.java:21)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+17:00:23,935 ERROR ~ 
+
+@6b1efkk3g
+Internal Server Error (500) for request GET /
+
+No route found (In /app/views/main.html around line 30)
+No route able to invoke action Application.contact was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:242)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:267)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:267)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Application.index(Application.java:21)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+16:21:47,660 ERROR ~ 
+
+@6b1efkk3h
+Internal Server Error (500) for request GET /application/rendersinglespeciesresults?protein_id=
+
+Execution exception (In /app/controllers/Application.java around line 46)
+IndexOutOfBoundsException occured : Index: 0, Size: 0
+
+play.exceptions.JavaExecutionException: Index: 0, Size: 0
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.RangeCheck(ArrayList.java:547)
+	at java.util.ArrayList.get(ArrayList.java:322)
+	at controllers.Application.renderSingleSpeciesResults(Application.java:46)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+16:22:03,192 ERROR ~ 
+
+@6b1efkk3i
+Internal Server Error (500) for request GET /application/rendersinglespeciesresults?protein_id=werw
+
+Execution exception (In /app/controllers/Application.java around line 46)
+IndexOutOfBoundsException occured : Index: 0, Size: 0
+
+play.exceptions.JavaExecutionException: Index: 0, Size: 0
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.RangeCheck(ArrayList.java:547)
+	at java.util.ArrayList.get(ArrayList.java:322)
+	at controllers.Application.renderSingleSpeciesResults(Application.java:46)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+16:22:20,280 ERROR ~ 
+
+@6b1efkk3j
+Internal Server Error (500) for request GET /application/rendersinglespeciesresults?protein_id=ENSP00000298742
+
+Execution exception (In /app/controllers/Application.java around line 46)
+IndexOutOfBoundsException occured : Index: 0, Size: 0
+
+play.exceptions.JavaExecutionException: Index: 0, Size: 0
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.RangeCheck(ArrayList.java:547)
+	at java.util.ArrayList.get(ArrayList.java:322)
+	at controllers.Application.renderSingleSpeciesResults(Application.java:46)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+16:22:37,624 ERROR ~ 
+
+@6b1efkk3k
+Internal Server Error (500) for request GET /application/rendersinglespeciesresults?protein_id=ENSAMEP000
+
+Execution exception (In /app/controllers/Application.java around line 46)
+IndexOutOfBoundsException occured : Index: 0, Size: 0
+
+play.exceptions.JavaExecutionException: Index: 0, Size: 0
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.RangeCheck(ArrayList.java:547)
+	at java.util.ArrayList.get(ArrayList.java:322)
+	at controllers.Application.renderSingleSpeciesResults(Application.java:46)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+16:29:29,317 ERROR ~ 
+
+@6b1efkk3l
+Internal Server Error (500) for request GET /application/rendersinglespeciesresults?protein_id=ENS
+
+Execution exception (In /app/controllers/Application.java around line 46)
+IndexOutOfBoundsException occured : Index: 0, Size: 0
+
+play.exceptions.JavaExecutionException: Index: 0, Size: 0
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.RangeCheck(ArrayList.java:547)
+	at java.util.ArrayList.get(ArrayList.java:322)
+	at controllers.Application.renderSingleSpeciesResults(Application.java:46)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+16:32:37,971 ERROR ~ 
+
+@6b1efkk3m
+Internal Server Error (500) for request GET /application/rendersinglespeciesresults?protein_id=ENS
+
+Execution exception (In /app/controllers/Application.java around line 46)
+IndexOutOfBoundsException occured : Index: 0, Size: 0
+
+play.exceptions.JavaExecutionException: Index: 0, Size: 0
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.RangeCheck(ArrayList.java:547)
+	at java.util.ArrayList.get(ArrayList.java:322)
+	at controllers.Application.renderSingleSpeciesResults(Application.java:46)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+10:08:00,926 ERROR ~ 
+
+@6b1efkk3n
+Internal Server Error (500) for request GET /application/rendersinglespeciesresults?protein_id=ENSAMEP00000020476
+
+Execution exception (In /app/controllers/Application.java around line 46)
+IndexOutOfBoundsException occured : Index: 0, Size: 0
+
+play.exceptions.JavaExecutionException: Index: 0, Size: 0
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.RangeCheck(ArrayList.java:547)
+	at java.util.ArrayList.get(ArrayList.java:322)
+	at controllers.Application.renderSingleSpeciesResults(Application.java:46)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+14:56:46,169 ERROR ~ 
+
+@6b1efkk3o
+Internal Server Error (500) for request GET /
+
+Compilation error (In /app/controllers/Application.java around line 47)
+The file /app/controllers/Application.java could not be compiled. Error raised is : ortholog.ref_protein_id cannot be resolved to a type
+
+play.exceptions.CompilationException: ortholog.ref_protein_id cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:277)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:322)
+	at play.Play.detectChanges(Play.java:614)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+14:59:36,900 ERROR ~ 
+
+@6b1efkk3p
+Internal Server Error (500) for request GET /
+
+Compilation error (In /app/controllers/Application.java around line 47)
+The file /app/controllers/Application.java could not be compiled. Error raised is : ortholog.ref_protein_id cannot be resolved to a type
+
+play.exceptions.CompilationException: ortholog.ref_protein_id cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:277)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:322)
+	at play.Play.detectChanges(Play.java:614)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+10:26:16,901 ERROR ~ 
+
+@6b1efkk40
+Internal Server Error (500) for request GET /application/renderhumanhomologsearch?ref_protein_id=ENS
+
+Execution exception (In /app/controllers/Application.java around line 62)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.Application.renderHumanHomologSearch(Application.java:62)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+10:26:30,643 ERROR ~ 
+
+@6b1efkk41
+Internal Server Error (500) for request GET /application/renderhumanhomologsearch?ref_protein_id=ENS
+
+Execution exception (In /app/controllers/Application.java around line 62)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.Application.renderHumanHomologSearch(Application.java:62)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+12:17:51,288 ERROR ~ 
+
+@6b1efkk42
+Internal Server Error (500) for request GET /application/rendersinglespeciesresults?protein_id=78
+
+Execution exception (In /app/controllers/Application.java around line 46)
+IndexOutOfBoundsException occured : Index: 0, Size: 0
+
+play.exceptions.JavaExecutionException: Index: 0, Size: 0
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.RangeCheck(ArrayList.java:547)
+	at java.util.ArrayList.get(ArrayList.java:322)
+	at controllers.Application.renderSingleSpeciesResults(Application.java:46)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+15:45:36,731 ERROR ~ 
+
+@6b1efkk43
+Application.index action not found
+
+Action not found
+Action Application.index could not be found. Error raised is Controller controllers.Application not found
+
+play.exceptions.ActionNotFoundException: Action Application.index not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:590)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:85)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.Application not found
+	... 3 more
+16:21:14,730 ERROR ~ 
+
+@6b1efkk44
+Internal Server Error (500) for request GET /
+
+Compilation error (In /app/controllers/Application.java around line 39)
+The file /app/controllers/Application.java could not be compiled. Error raised is : Syntax error on token "(", invalid VariableDeclaratorId
+
+play.exceptions.CompilationException: Syntax error on token "(", invalid VariableDeclaratorId
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:277)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:322)
+	at play.Play.detectChanges(Play.java:614)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+16:28:54,558 ERROR ~ 
+
+@6b1efkk45
+Internal Server Error (500) for request GET /help
+
+Template compilation error (In /app/views/main.html around line 28)
+The template /app/views/main.html does not compile : unexpected token: ( 
+
+play.exceptions.TemplateCompilationException: unexpected token: ( 
+	at play.templates.GroovyTemplate.compile(GroovyTemplate.java:174)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:195)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:267)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Application.help(Application.java:25)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+11:12:53,318 ERROR ~ 
+
+@6b1efkk46
+Internal Server Error (500) for request GET /application/rendersinglespeciesresults
+
+Execution exception (In /app/controllers/Application.java around line 50)
+IndexOutOfBoundsException occured : Index: 0, Size: 0
+
+play.exceptions.JavaExecutionException: Index: 0, Size: 0
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.RangeCheck(ArrayList.java:547)
+	at java.util.ArrayList.get(ArrayList.java:322)
+	at controllers.Application.renderSingleSpeciesResults(Application.java:50)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+15:56:01,034 ERROR ~ 
+
+@6b1efkk47
+Internal Server Error (500) for request GET /
+
+Compilation error (In /app/controllers/Application.java around line 31)
+The file /app/controllers/Application.java could not be compiled. Error raised is : Syntax error on token "pro_id", VariableDeclaratorId expected after this token
+
+play.exceptions.CompilationException: Syntax error on token "pro_id", VariableDeclaratorId expected after this token
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:277)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:322)
+	at play.Play.detectChanges(Play.java:614)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+15:56:31,160 ERROR ~ 
+
+@6b1efkk48
+Internal Server Error (500) for request GET /
+
+Compilation error (In /app/controllers/Application.java around line 32)
+The file /app/controllers/Application.java could not be compiled. Error raised is : pro_id cannot be resolved to a variable
+
+play.exceptions.CompilationException: pro_id cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:277)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:322)
+	at play.Play.detectChanges(Play.java:614)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+15:57:15,967 ERROR ~ 
+
+@6b1efkk49
+Internal Server Error (500) for request GET /
+
+Compilation error (In /app/controllers/Application.java around line 32)
+The file /app/controllers/Application.java could not be compiled. Error raised is : pro_id cannot be resolved to a variable
+
+play.exceptions.CompilationException: pro_id cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:277)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:322)
+	at play.Play.detectChanges(Play.java:614)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+15:57:19,201 ERROR ~ 
+
+@6b1efkk4a
+Internal Server Error (500) for request GET /
+
+Compilation error (In /app/controllers/Application.java around line 32)
+The file /app/controllers/Application.java could not be compiled. Error raised is : pro_id cannot be resolved to a variable
+
+play.exceptions.CompilationException: pro_id cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:277)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:322)
+	at play.Play.detectChanges(Play.java:614)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+17:47:04,876 ERROR ~ 
+
+@6b1efkk4b
+Internal Server Error (500) for request GET /
+
+Template compilation error (In /app/views/tags/main_data.html around line 30)
+The template /app/views/tags/main_data.html does not compile : #{set} is not closed.
+
+play.exceptions.TemplateCompilationException: #{set} is not closed.
+	at play.templates.GroovyTemplateCompiler.endTag(GroovyTemplateCompiler.java:316)
+	at play.templates.TemplateCompiler.generate(TemplateCompiler.java:93)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:15)
+	at play.templates.GroovyTemplateCompiler.compile(GroovyTemplateCompiler.java:41)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:28)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:87)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:172)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:348)
+	at /app/views/Application/index.html.(line:1)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Application.index(Application.java:21)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+17:47:07,041 ERROR ~ 
+
+@6b1efkk4c
+Internal Server Error (500) for request GET /
+
+Template compilation error (In /app/views/tags/main_data.html around line 30)
+The template /app/views/tags/main_data.html does not compile : #{set} is not closed.
+
+play.exceptions.TemplateCompilationException: #{set} is not closed.
+	at play.templates.GroovyTemplateCompiler.endTag(GroovyTemplateCompiler.java:316)
+	at play.templates.TemplateCompiler.generate(TemplateCompiler.java:93)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:15)
+	at play.templates.GroovyTemplateCompiler.compile(GroovyTemplateCompiler.java:41)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:28)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:87)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:172)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:348)
+	at /app/views/Application/index.html.(line:1)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Application.index(Application.java:21)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+18:32:28,141 ERROR ~ 
+
+@6b1efkk4d
+Internal Server Error (500) for request GET /
+
+Compilation error (In /app/controllers/Application.java around line 32)
+The file /app/controllers/Application.java could not be compiled. Error raised is : pro_id cannot be resolved to a variable
+
+play.exceptions.CompilationException: pro_id cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:277)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:322)
+	at play.Play.detectChanges(Play.java:614)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+18:32:36,976 ERROR ~ 
+
+@6b1efkk4e
+Internal Server Error (500) for request GET /
+
+Compilation error (In /app/controllers/Application.java around line 32)
+The file /app/controllers/Application.java could not be compiled. Error raised is : pro_id cannot be resolved to a variable
+
+play.exceptions.CompilationException: pro_id cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:277)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:322)
+	at play.Play.detectChanges(Play.java:614)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+11:33:45,400 ERROR ~ 
+
+@6b1efkk4f
+Internal Server Error (500) for request GET /
+
+Compilation error (In /app/controllers/Application.java around line 63)
+The file /app/controllers/Application.java could not be compiled. Error raised is : Syntax error, insert "}" to complete Block
+
+play.exceptions.CompilationException: Syntax error, insert "}" to complete Block
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:478)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:277)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:322)
+	at play.Play.detectChanges(Play.java:614)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+11:34:51,775 ERROR ~ 
+
+@6b1efkk4g
+Internal Server Error (500) for request GET /
+
+Compilation error (In /app/controllers/Application.java around line 46)
+The file /app/controllers/Application.java could not be compiled. Error raised is : BufferedReader cannot be resolved to a type
+
+play.exceptions.CompilationException: BufferedReader cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:277)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:322)
+	at play.Play.detectChanges(Play.java:614)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+11:35:35,877 ERROR ~ 
+
+@6b1efkk4h
+Internal Server Error (500) for request GET /
+
+Compilation error (In /app/controllers/Application.java around line 55)
+The file /app/controllers/Application.java could not be compiled. Error raised is : s cannot be resolved to a variable
+
+play.exceptions.CompilationException: s cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:277)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:322)
+	at play.Play.detectChanges(Play.java:614)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+1_0	ENSP00000309629	100.00	166	0	0	1	166	1	166	2e-92	 335
+1_0	ENSP00000432660	100.00	166	0	0	1	166	1	166	2e-92	 335
+1_0	ENSP00000431696	100.00	165	0	0	2	166	40	204	1e-91	 333
+1_0	ENSP00000436431	100.00	160	0	0	1	160	1	160	8e-89	 323
+1_0	ENSP00000433131	100.00	149	0	0	18	166	1	149	4e-82	 301
+1_0	ENSP00000432226	100.00	149	0	0	18	166	1	149	4e-82	 301
+1_0	ENSP00000433910	100.00	149	0	0	18	166	1	149	4e-82	 301
+1_0	ENSP00000432155	100.00	149	0	0	18	166	1	149	4e-82	 301
+1_0	ENSP00000298159	80.72	166	32	0	1	166	1	166	3e-75	 278
+1_0	ENSP00000340635	80.72	166	32	0	1	166	1	166	3e-75	 278
+1_0	ENSP00000452188	80.54	149	29	0	18	166	1	149	7e-67	 250
+1_0	ENSP00000452451	80.54	149	29	0	18	166	1	149	7e-67	 250
+1_0	ENSP00000436899	100.00	122	0	0	18	139	1	122	3e-66	 248
+1_0	ENSP00000246069	71.08	166	47	1	1	166	1	165	5e-64	 241
+1_0	ENSP00000444808	72.48	149	40	1	18	166	1	148	6e-58	 221
+1_0	ENSP00000434355	76.15	130	31	0	1	130	1	130	2e-53	 205
+1_0	ENSP00000432153	100.00	91	0	0	1	91	1	91	3e-47	 185
+1_0	ENSP00000433308	100.00	79	0	0	18	96	1	79	1e-39	 160
+1_0	ENSP00000409326	80.36	56	11	0	1	56	1	56	3e-19	92.4
+1_0	ENSP00000321058	26.72	116	74	5	37	143	50	163	3e-05	45.8
+1_0	ENSP00000448221	28.28	99	63	4	51	143	71	167	4e-05	45.8
+1_0	ENSP00000378886	28.28	99	63	4	51	143	33	129	4e-05	45.4
+1_0	ENSP00000449428	28.28	99	63	4	51	143	33	129	4e-05	45.4
+1_0	ENSP00000446696	27.84	97	62	4	53	143	9	103	2e-04	43.5
+1_0	ENSP00000426464	30.49	82	46	4	74	150	57	132	0.001	40.4
+1_0	ENSP00000303908	30.99	71	41	3	82	150	68	132	0.001	40.4
+1_0	ENSP00000450862	84.21	19	3	0	1	19	1	19	0.14	33.9
+1_0	ENSP00000350757	21.85	119	75	4	7	124	10	111	0.50	32.0
+1_0	ENSP00000441945	24.73	93	54	4	67	147	25	113	0.67	31.6
+1_0	ENSP00000346789	25.27	91	57	3	35	124	31	111	0.73	31.2
+1_0	ENSP00000260803	24.73	93	54	4	67	147	259	347	1.8	30.0
+1_0	ENSP00000253054	29.41	51	35	1	75	124	61	111	3.6	28.9

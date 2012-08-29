@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<style type="text/css">
+
+
+</style>
     <head>   
         <title>#{get 'title' /}</title>
         <meta charset="${_response_encoding}">
@@ -13,7 +17,7 @@
         <div class="container">
 	        <div class="header">
 				<div id="logo1"><a href="@{Application.index()}"><img src="/public/images/exo_banner_left.png" width="515" height="115" style="background: #8090AB; display:block;"/></a></div>
-				<div id="logo2"><img src="/public/images/exo_banner_right.png" width="199" height="115" style="background: #8090AB; display:block;"/></div>
+				<div id="logo2"><img src="/public/images/exo_banner_right.png" width="199" height="116" style="background: #8090AB; display:block;"/></div>
 				<br class="clearfloat" />
 			</div>
 			<div class="menu">
@@ -23,7 +27,7 @@
 						<li><a href="@{Application.index()}">HOME</a></li>
 						<li><a href="@{Application.help()}">HELP</a></li>
 						<li><a href="http://epsf.bmad.bii.a-star.edu.sg/">ABOUT</a></li>
-						<li><a href="">CONTACT</a></li>
+						<li><a href="@{Application.contactUs()}">CONTACT</a></li>
 					</ul>
 				</div>
 			</div>
